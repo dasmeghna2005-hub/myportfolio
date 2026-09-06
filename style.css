@@ -936,6 +936,8 @@ a.contact-value:hover { color: var(--c5); }
 }
 
 @media (max-width: 720px) {
+  :root { --gutter: 1.25rem; }
+
   .main-nav {
     position: fixed;
     inset: 72px 0 0 0;
@@ -961,12 +963,54 @@ a.contact-value:hover { color: var(--c5); }
   .nav-toggle { display: flex; }
 
   .tilt-card { transform: none !important; }
+
+  .hero-actions { gap: 0.75rem; }
+  .btn { padding: 0.8rem 1.15rem; }
+  .timeline-content,
+  .experience-card,
+  .cert-card,
+  .contact-form { padding: 1.35rem; }
+  .contact-value { overflow-wrap: anywhere; }
 }
 
 @media (max-width: 560px) {
+  body { font-size: 1rem; }
+
+  .section { padding: 3.5rem 0; }
+  .section-heading-block { margin-bottom: 1.75rem; }
+
+  .header-inner { height: 64px; }
+  .main-nav { inset: 64px 0 0 0; }
+  .logo { font-size: 1rem; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-heading { font-size: clamp(2.1rem, 11vw, 3rem); }
+  .hero-summary { font-size: 1rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+
   .skills-grid { grid-template-columns: 1fr; }
   .cert-card { flex-direction: column; }
   .photo-frame { transform: none; }
-  .floating-chip { position: static; margin: 0.4rem; display: inline-flex; }
-  .hero-visual { flex-wrap: wrap; gap: 0.75rem; min-height: auto; }
+  .hero-visual { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; min-height: auto; }
+  .photo-frame { grid-column: 1 / -1; justify-self: center; width: min(280px, 82vw); }
+  .floating-chip { position: static; width: 76px; height: 76px; justify-self: center; }
+  .chip-value { font-size: 1rem; }
+  .chip-label { font-size: 0.6rem; }
+
+  .stat-row { gap: 0.75rem; }
+  .stat { padding: 0.85rem; }
+  .stat-value { font-size: 1.35rem; }
+  .stat-label { font-size: 0.78rem; }
+
+  .timeline { padding-left: 1.5rem; }
+  .timeline-dot { left: -1.5rem; }
+  .timeline-content { padding: 1.15rem; }
+  .timeline-title { font-size: 1.05rem; }
+
+  .filter-bar { gap: 0.45rem; }
+  .filter-btn { padding: 0.45rem 0.75rem; }
+  .project-body { padding: 1.25rem; }
+
+  .footer-inner { align-items: flex-start; flex-direction: column; }
 }
